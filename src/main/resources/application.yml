@@ -1,0 +1,26 @@
+micronaut:
+  application:
+    name: pbaHeadless
+  router:
+    static-resources:
+      default:
+        enabled: true
+        mapping: "/styles/**"
+        paths: "classpath:styles"
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        connection:
+          db-type: postgres
+          url: jdbc:postgresql://localhost:5432/pba-headless
+          username: airbyte
+          password: password
+    reactive: true
+
