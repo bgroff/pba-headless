@@ -19,7 +19,7 @@ jpa:
           auto: update
         connection:
           db-type: postgres
-          url: jdbc:postgresql://localhost:5432/pba-headless
+          url: jdbc:postgresql://localhost:5431/pba-headless
           username: airbyte
           password: password
     reactive: true
