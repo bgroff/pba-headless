@@ -28,6 +28,7 @@ ui/coverage
 # next.js
 ui/.next/
 ui/out/
+ui/dist/
 
 # production
 ui/build
