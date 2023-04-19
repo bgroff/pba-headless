@@ -1,0 +1,44 @@
+<!-- Projects table (small breakpoint and up) -->
+<div >
+  <div class="inline-block min-w-full border-b border-gray-200 align-middle">
+    <table class="min-w-full">
+      <thead>
+        <tr class="border-t border-gray-200">
+          <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
+            scope="col">
+            <span class="lg:pl-2">Project</span>
+          </th>
+          <th class="border-b border-gray-200 bg-gray-50 px-6 py-3 text-left text-sm font-semibold text-gray-900"
+            scope="col">Members</th>
+          <th
+            class="hidden border-b border-gray-200 bg-gray-50 px-6 py-3 text-right text-sm font-semibold text-gray-900 md:table-cell"
+            scope="col">Last updated</th>
+          <th class="border-b border-gray-200 bg-gray-50 py-3 pr-6 text-right text-sm font-semibold text-gray-900"
+            scope="col"></th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-100 bg-white">
+        <tr *ngFor="let bakery of bakeries">
+          <td class="w-full max-w-0 whitespace-nowrap px-6 py-3 text-sm font-medium text-gray-900">
+            <div class="flex items-center space-x-3 lg:pl-2">
+              <div class="h-2.5 w-2.5 flex-shrink-0 rounded-full bg-pink-600" aria-hidden="true"></div>
+              <a href="#" class="truncate hover:text-gray-600">
+                <span>
+                  {{bakery.name}}
+                  <span class="font-normal text-gray-500">in Engineering</span>
+                </span>
+              </a>
+            </div>
+          </td>
+          <td class="px-6 py-3 text-sm font-medium text-gray-500">
+              <span class="flex-shrink-0 text-xs font-medium leading-5">{{bakery.numberOfMembers}}+</span>
+          </td>
+          <td class="hidden whitespace-nowrap px-6 py-3 text-right text-sm text-gray-500 md:table-cell">{{bakery.updatedOn}}</td>
+          <td class="whitespace-nowrap px-6 py-3 text-right text-sm font-medium">
+            <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

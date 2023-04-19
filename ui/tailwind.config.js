@@ -1,20 +1,13 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{html,ts}",
   ],
   theme: {
-/**    colors: {
-      sky: colors.sky,
-      teal: colors.teal,
-      cyan: colors.cyan,
-      rose: colors.rose,
-    },**/
+    extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/line-clamp'),
+      require('@tailwindcss/forms'),
   ],
 }
+

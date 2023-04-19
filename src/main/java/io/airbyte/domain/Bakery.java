@@ -1,11 +1,14 @@
 package io.airbyte.domain;
 
+import io.micronaut.serde.annotation.Serdeable;
+
 import java.time.OffsetDateTime;
 import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Serdeable
 @Entity
 public class Bakery {
   @Id
@@ -21,7 +24,6 @@ public class Bakery {
   OffsetDateTime createdOn;
 
   OffsetDateTime updatedOn;
-
 
   public Long getId() {
     return id;

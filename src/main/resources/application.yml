@@ -7,6 +7,19 @@ micronaut:
         enabled: true
         mapping: "/styles/**"
         paths: "classpath:styles"
+  server:
+    cors:
+      enabled: true
+      configurations:
+        ui:
+          allowed-origins:
+            - http://127.0.0.1:3000
+            - http://localhost:3000
+            - http://localhost:4200
+  serde:
+#    write-dates-as-timestamps: false # 1
+    date-format: 'yyyy-MM-dd' #2
+
 netty:
   default:
     allocator:
@@ -24,3 +37,6 @@ jpa:
           password: password
     reactive: true
 
+airbyte:
+  serverUrl: "https://api.airbyte.com/v1"
+  apiKey: ${AIRBYTE_API_KEY}
